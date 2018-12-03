@@ -1,0 +1,2 @@
+# animation-c
+Animation practice!
