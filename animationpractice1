@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html><head>
+  <title>Shaka!</title>
+  <style> 
+    .thwat { color:blue; 
+position:absolute;
+animation:k1 10s 1 forwards;
+} 
+
+.sheep {
+color: blue;
+position:absolute;
+animation: k2 10s 1 forwards;
+} 
+
+.cat {
+color: red;
+position: absolute;
+animation: k3 10s 1 forwards;
+}
+
+@keyframes k1 {
+0% {left: 0in; top: 10px;}
+20% {left: 3in; top: 30px;}
+40% {left: 2in; top: 50px;}
+60% {left: 2in; top: 70px;}
+80% {left: 0in; top: 90px;}
+100% {left: 2in; top: 110px;};
+}
+
+@keyframes k2 {
+0% {left: 0in; top: 10px;}
+20% {left: 2in; top: 30px;}
+40% {left: 1in; top: 50px;}
+60% {left: 3in; top: 70px;}
+80% {left: 2in; top: 90px;}
+100% {left: 1in; top: 110px;};
+}
+
+@keyframes k3 {
+0% {left: 0in; top: 10px;}
+20% {left: 1in; top: 30px;}
+40% {left: 3in; top: 50px;}
+60% {left: 2in; top: 70px;}
+80% {left: 1in; top: 90px;}
+100% {left: 3in; top: 110px;};
+}
+
+
+
+
+  </style>
+  <script>  
+function fire() {
+var that = document.getElementById("thwat");
+that.style.color="red";
+}
+
+function swap (){
+var that = document.getElementById("s");
+that.classList.remove("thwat");
+that.classList.add("sheep");
+that.innerHTML="Click me to randomize!";
+}
+  </script>
+</head><body>
+  <h1 class="thwat" id="s" onclick="swap()">Hang </h1>
+  <h1 class="sheep" id="s" onclick="swap()">Hang </h1>
+  <h1 class="cat" id="s" onclick="swap()">Hang</h1>
+
+
+</body></html>
+          
