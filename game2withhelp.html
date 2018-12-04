@@ -1,0 +1,317 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+        body {
+            background-image: url(Untitled.jpg);
+            background-size: cover; 
+        }
+        img {
+            top: 3in;
+            height: 250px;
+            width: 200px;
+            border: 6px solid blue;
+            border-radius: 25px;        
+            display:inline;
+
+            }
+
+        .hide {
+            display: none;
+        }
+
+
+        p {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        #counter {
+          
+            font-family: 'Raleway', sans-serif;
+            position: absolute;
+            right: 0px;
+            background-color: lightcyan;
+            border: 3px solid black;
+            border-radius: 3px;
+            font-size: 24px;
+
+        }
+
+        #results {
+            background-color: white; 
+            display: inline; 
+            font-size: 24px;
+        }
+        #pass {
+            display:block;
+            position: relative; 
+            text-align: center;
+            top: 500px; 
+            left: 6in;
+
+        }
+
+        .cat {
+            color: blue;
+            position: absolute;
+            animation: k1 5s 1 forwards;
+        }
+
+        .lion {
+            color: blue;
+            position: absolute;
+            animation: k2 5s 1 forwards;
+        }
+
+        .kitten {
+            color: red;
+            position: absolute;
+            animation: k3 5s 1 forwards;
+        }
+
+        @keyframes k1 {
+            0% {
+                left: 0in;
+                top: 20px;
+            }
+
+            20% {
+                left: 3in;
+                top: 60px;
+            }
+
+            40% {
+                left: 6in;
+                top: 100px;
+            }
+
+            60% {
+                left: 6in;
+                top: 140px;
+            }
+
+            80% {
+                left: 3in;
+                top: 180px;
+            }
+
+            100% {
+                left: 6in;
+                top: 220px;
+            }
+
+            ;
+        }
+
+        @keyframes k2 {
+            0% {
+                left: 0in;
+                top: 20px;
+            }
+
+            20% {
+                left: 6in;
+                top: 60px;
+            }
+
+            40% {
+                left: 9in;
+                top: 100px;
+            }
+
+            60% {
+                left: 3in;
+                top: 140px;
+            }
+
+            80% {
+                left: 9in;
+                top: 180px;
+            }
+
+            100% {
+                left: 3in;
+                top: 220px;
+            }
+
+            ;
+        }
+
+        @keyframes k3 {
+            0% {
+                left: 0in;
+                top: 20px;
+            }
+
+            20% {
+                left: 9in;
+                top: 60px;
+            }
+
+            40% {
+                left: 6in;
+                top: 100px;
+            }
+
+            60% {
+                left: 9in;
+                top: 140px;
+            }
+
+            80% {
+                left: 6in;
+                top: 180px;
+            }
+
+            100% {
+                left: 9in;
+                top: 220px;
+            }
+
+            ;
+        }
+
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script>
+
+        var alpha = document.getElementById("1");
+        var beta = document.getElementById("2");
+        var charlie = document.getElementById("3");
+        var delta = document.getElementById("counter");
+        var echo = 0;
+        var foxtrot = 0;      
+
+        function next() {
+            var alpha = document.getElementById("1");
+            var beta = document.getElementById("2");
+            var charlie = document.getElementById("3");
+            alpha.src = "shell.jpg";
+            beta.src = "shell.jpg";
+            charlie.src = "shell.jpg";
+
+        }        
+        function Funyum() {
+            var correct = (Math.floor(Math.random() * 3 + 1));
+            var alpha = document.getElementById("1");
+            var beta = document.getElementById("2");
+            var charlie = document.getElementById("3");
+            var results = document.getElementById("results");
+            var counter = document.getElementById("counter");
+            var pass = document.getElementById("pass"); 
+
+            alpha.src = "wrong.jpg";
+            beta.src = "wrong.jpg";
+            charlie.src = "wrong.jpg";
+
+            if ((correct == 1)) {
+                echo += 1;
+                foxtrot += 1;
+                document.getElementById("1").src = "right.jpg"
+                document.getElementById("results").innerHTML = "You chose correct!";
+                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                pass.classList.remove("hide");
+                
+            } else if ((correct == 2)) {
+                foxtrot += 1;
+                document.getElementById("2").src = "right.jpg";
+                results.innerHTML = "You chose incorrectly!";
+                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                pass.classList.remove("hide");
+
+            } else if ((correct == 3)) {
+                foxtrot += 1;
+                document.getElementById("3").src = "right.jpg";
+                results.innerHTML = "You chose incorrectly!";
+                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                pass.classList.remove("hide");
+
+            }
+
+        }
+        function Cheeto() {
+            var correct = (Math.floor(Math.random() * 3 + 1));
+            var alpha = document.getElementById("1");
+            var beta = document.getElementById("2");
+            var charlie = document.getElementById("3");
+            var results = document.getElementById("results")
+            alpha.src = "wrong.jpg";
+            beta.src = "wrong.jpg";
+            charlie.src = "wrong.jpg";
+            if ((correct == 1)) {
+                foxtrot += 1;
+                document.getElementById("1").src = "right.jpg"
+                document.getElementById("results").innerHTML = "You chose incorrectly!";
+                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                pass.classList.remove("hide");
+
+            } else if ((correct == 2)) {
+                echo += 1;
+                foxtrot += 1;
+                document.getElementById("2").src = "right.jpg";
+                results.innerHTML = "You chose correct!";
+                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                pass.classList.remove("hide");
+
+            } else if ((correct == 3)) {
+                foxtrot += 1;
+                document.getElementById("3").src = "right.jpg";
+                results.innerHTML = "You chose incorrectly!";
+                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                pass.classList.remove("hide");
+
+            }
+
+        }
+        function Crisp() {
+            var correct = (Math.floor(Math.random() * 3 + 1));
+            var alpha = document.getElementById("1");
+            var beta = document.getElementById("2");
+            var charlie = document.getElementById("3");
+            var results = document.getElementById("results")
+            alpha.src = "wrong.jpg";
+            beta.src = "wrong.jpg";
+            charlie.src = "wrong.jpg";
+            if ((correct == 1)) {
+                foxtrot += 1;
+                document.getElementById("1").src = "right.jpg"
+                document.getElementById("results").innerHTML = "You chose incorrectly!";
+                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`
+                pass.classList.remove("hide");
+
+
+            } else if ((correct == 2)) {
+                foxtrot += 1;
+                document.getElementById("2").src = "right.jpg";
+                results.innerHTML = "You chose incorrectly!";
+                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                pass.classList.remove("hide");
+
+
+            } else if ((correct == 3)) {
+                echo += 1;
+                foxtrot += 1;
+                document.getElementById("3").src = "right.jpg";
+                results.innerHTML = "You chose correctly!";
+                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                pass.classList.remove("hide");
+
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="counter" class="literally">You've found it this many times!</div>
+    <div><img src="shell.jpg" id="1" class="cat" onclick="Funyum()"/><img src="shell.jpg" onclick="Cheeto()" class="lion" id="2"/><img src="shell.jpg" onclick="Crisp()" class="kitten" id="3"/></div> 
+    <p id="results" onclick="shuffle()">Where is the pearl located?</p>
+    <button class="hide" id="reset" onclick="reload()">Are you ready to try again?</button>
+    <button class="hide" id="pass" onclick="next()">Click me to try again!</button>
+    </body>
+</html>
