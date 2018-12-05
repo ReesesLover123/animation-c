@@ -180,55 +180,55 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <script>
 
-        var alpha = document.getElementById("1");
-        var beta = document.getElementById("2");
-        var charlie = document.getElementById("3");
-        var delta = document.getElementById("counter");
-        var echo = 0;
-        var foxtrot = 0;      
+        var choice1 = document.getElementById("1");
+        var choice2 = document.getElementById("2");
+        var choice3 = document.getElementById("3");
+        var count = document.getElementById("counter");
+        var right = 0;
+        var attempt = 0;      
 
         function next() {
-            var alpha = document.getElementById("1");
-            var beta = document.getElementById("2");
-            var charlie = document.getElementById("3");
-            alpha.src = "shell.jpg";
-            beta.src = "shell.jpg";
-            charlie.src = "shell.jpg";
+            var choice1 = document.getElementById("1");
+            var choice2 = document.getElementById("2");
+            var choice3 = document.getElementById("3");
+            choice1.src = "shell.jpg";
+            choice2.src = "shell.jpg";
+            choice3.src = "shell.jpg";
 
         }        
         function Funyum() {
             var correct = (Math.floor(Math.random() * 3 + 1));
-            var alpha = document.getElementById("1");
-            var beta = document.getElementById("2");
-            var charlie = document.getElementById("3");
+            var choice1 = document.getElementById("1");
+            var choice2 = document.getElementById("2");
+            var choice3 = document.getElementById("3");
             var results = document.getElementById("results");
-            var counter = document.getElementById("counter");
+            var count = document.getElementById("counter");
             var pass = document.getElementById("pass"); 
 
-            alpha.src = "wrong.jpg";
-            beta.src = "wrong.jpg";
-            charlie.src = "wrong.jpg";
+            choice1.src = "wrong.jpg";
+            choice2.src = "wrong.jpg";
+            choice3.src = "wrong.jpg";
 
             if ((correct == 1)) {
-                echo += 1;
-                foxtrot += 1;
+                right += 1;
+                attempt += 1;
                 document.getElementById("1").src = "right.jpg"
                 document.getElementById("results").innerHTML = "You chose correct!";
-                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                count.innerHTML = `You got it right ${right}/${attempt} times!`;
                 pass.classList.remove("hide");
                 
             } else if ((correct == 2)) {
-                foxtrot += 1;
+                attempt += 1;
                 document.getElementById("2").src = "right.jpg";
                 results.innerHTML = "You chose incorrectly!";
-                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                count.innerHTML = `You got it right ${right}/${attempt} times!`;
                 pass.classList.remove("hide");
 
             } else if ((correct == 3)) {
                 foxtrot += 1;
                 document.getElementById("3").src = "right.jpg";
                 results.innerHTML = "You chose incorrectly!";
-                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                count.innerHTML = `You got it right ${right}/${attempt} times!`;
                 pass.classList.remove("hide");
 
             }
@@ -236,33 +236,34 @@
         }
         function Cheeto() {
             var correct = (Math.floor(Math.random() * 3 + 1));
-            var alpha = document.getElementById("1");
-            var beta = document.getElementById("2");
-            var charlie = document.getElementById("3");
-            var results = document.getElementById("results")
-            alpha.src = "wrong.jpg";
-            beta.src = "wrong.jpg";
-            charlie.src = "wrong.jpg";
+            var choice1 = document.getElementById("1");
+            var choice2 = document.getElementById("2");
+            var choice3 = document.getElementById("3");
+            var results = document.getElementById("results");
+            var count = document.getElementById("counter");
+            var pass = document.getElementById("pass"); 
+            choice1.src = "wrong.jpg";
+            choice2.src = "wrong.jpg";
+            choice3.src = "wrong.jpg";
             if ((correct == 1)) {
-                foxtrot += 1;
+                attempt += 1;
                 document.getElementById("1").src = "right.jpg"
-                document.getElementById("results").innerHTML = "You chose incorrectly!";
-                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                results.innerHTML = "You chose incorrectly!";
+                count.innerHTML = `You got it right ${right}/${attempt} times!`;
                 pass.classList.remove("hide");
-
             } else if ((correct == 2)) {
-                echo += 1;
-                foxtrot += 1;
+                attempt += 1;
+                correct += 1;
                 document.getElementById("2").src = "right.jpg";
                 results.innerHTML = "You chose correct!";
-                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                count.innerHTML = `You got it right ${right}/${attempt} times!`;
                 pass.classList.remove("hide");
 
             } else if ((correct == 3)) {
                 foxtrot += 1;
                 document.getElementById("3").src = "right.jpg";
                 results.innerHTML = "You chose incorrectly!";
-                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                count.innerHTML = `You got it right ${right}/${attempt} times!`;
                 pass.classList.remove("hide");
 
             }
@@ -270,32 +271,34 @@
         }
         function Crisp() {
             var correct = (Math.floor(Math.random() * 3 + 1));
-            var alpha = document.getElementById("1");
-            var beta = document.getElementById("2");
-            var charlie = document.getElementById("3");
-            var results = document.getElementById("results")
-            alpha.src = "wrong.jpg";
-            beta.src = "wrong.jpg";
-            charlie.src = "wrong.jpg";
+            var choice1 = document.getElementById("1");
+            var choice2 = document.getElementById("2");
+            var choice3 = document.getElementById("3");
+            var results = document.getElementById("results");
+            var count = document.getElementById("counter");
+            var pass = document.getElementById("pass"); 
+            choice1.src = "wrong.jpg";
+            choice2.src = "wrong.jpg";
+            choice3.src = "wrong.jpg";
             if ((correct == 1)) {
-                foxtrot += 1;
+                attempt += 1;
                 document.getElementById("1").src = "right.jpg"
                 document.getElementById("results").innerHTML = "You chose incorrectly!";
-                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`
+                count.innerHTML = `You got it right ${right}/${attempt} times!`
                 pass.classList.remove("hide");
 
 
             } else if ((correct == 2)) {
-                foxtrot += 1;
+                attempt += 1;
                 document.getElementById("2").src = "right.jpg";
                 results.innerHTML = "You chose incorrectly!";
-                counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
+                count.innerHTML = `You got it right ${right}/${attempt} times!`;
                 pass.classList.remove("hide");
 
 
             } else if ((correct == 3)) {
-                echo += 1;
-                foxtrot += 1;
+                right += 1;
+                attempt += 1;
                 document.getElementById("3").src = "right.jpg";
                 results.innerHTML = "You chose correctly!";
                 counter.innerHTML = `You got it right ${echo}/${foxtrot} times!`;
@@ -308,7 +311,7 @@
     </script>
 </head>
 <body>
-    <div id="counter" class="literally">You've found it this many times!</div>
+    <div id="counter">You've found it this many times!</div>
     <div><img src="shell.jpg" id="1" class="cat" onclick="Funyum()"/><img src="shell.jpg" onclick="Cheeto()" class="lion" id="2"/><img src="shell.jpg" onclick="Crisp()" class="kitten" id="3"/></div> 
     <p id="results" onclick="shuffle()">Where is the pearl located?</p>
     <button class="hide" id="reset" onclick="reload()">Are you ready to try again?</button>
